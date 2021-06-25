@@ -26,7 +26,7 @@ export function NewRoom (){
 
         })
 
-        history.push(`/${firebaseRoom.key}`)
+        history.push(`/rooms/${firebaseRoom.key}`)
     }
 
     const {user} = useAuth();
