@@ -3,21 +3,23 @@
     border-radius: 8px;
     overflow: hidden;
 
-    background: #FFF;
+    background: var(--theme-page-background);
     border: 1px solid #835afd;
     cursor: pointer;
-
-    display: flex;
-
+    width:25rem;
+    position:relative;
     div {
         background: #835afd;
-        padding: 0 12px;
+        padding: 0 12px 4px;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%; // <- Aqui
+        position:absolute;
+        margin-right: 360px;
       }
     span{
+        
         display: block;
         align-self: center;
         flex: 1;
@@ -25,6 +27,6 @@
         width: 230px;
         font-size: 14px;
         font-weight: 500;
-        color: black;
+        color: var(--theme-page-text);
     }
 }

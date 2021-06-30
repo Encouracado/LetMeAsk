@@ -1,4 +1,5 @@
-import Logo from '../assets/logo.svg'
+import LogoLight from '../assets/logo.svg'
+import LogoDark from '../assets/logoDark.svg'
 import {useParams} from  'react-router-dom'
 import {Button }from '../components/Button'
 import {RoomCode} from '../components/RoomCode'
@@ -8,6 +9,8 @@ import { useAuth } from '../hooks/useAuth'
 import { database } from '../services/firebase'
 import {Question} from '../components/Question'
 import { useRoom } from '../hooks/useRoom'
+import { useContext } from 'react'
+import {ThemeContextMode} from '../contexts/ThemeContext'
  
 type roomParams = {
     id: string,
@@ -15,6 +18,7 @@ type roomParams = {
 
 
 export function Room(){
+    const {theme} = useContext(ThemeContextMode)
     const {user} = useAuth()
     const [question, setNewQuestion] = useState('');
     const params = useParams<roomParams>();
@@ -57,10 +61,10 @@ export function Room(){
 
 
     return(
-        <div id="page-room">
+        <div id="page-room" className={theme}>
             <header>
                 <div className="content">
-                    <img src={Logo} alt="LetmeAsk" />
+                    <img src={theme==='dark' ? (LogoDark): (LogoLight)} alt="LetmeAsk" />
                     <RoomCode code={params.id} />
                 </div>
                 

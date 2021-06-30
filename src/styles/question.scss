@@ -1,9 +1,9 @@
 .question{
-    background: #fefefe;
+    background: var(--theme-question-background);
     border-radius: 8px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
     padding: 24px;
-
+    border: 1px solid var(--theme-border-question);
  
     &.highlighted{
       background: #f4f0ff;
@@ -14,14 +14,15 @@
       }
     }
     &.answered{
-    background: #737380 ;
+    background: var(--theme-background-question-answered);
+    
     }
 
     & + .question{
         margin-top: 8px;
     }
     p{
-      color: #29292e
+      color: var(--theme-page-text);
     }
     footer{
         display: flex;
@@ -38,7 +39,7 @@
             }
             span{
                 margin-left: 8px;
-                color: #737380;
+                color: var(--theme-span-user-color-name);
                 font-size: 14px;
             }
         }
@@ -69,6 +70,7 @@
             }
             &.delete-img{
               margin-left:50px;
+              
             }
             &:hoveR{
                 filter: brightness(0.7);

@@ -1,5 +1,6 @@
 import Illustrationimg from '../assets/illustration.svg'
-import Logo from '../assets/logo.svg'
+import LogoLight from '../assets/logo.svg'
+import LogoDark from '../assets/logoDark.svg'
 import {Link, useHistory} from 'react-router-dom'
 import {Button} from '../components/Button'
 import {FormEvent, useState} from 'react'
@@ -7,8 +8,11 @@ import '../styles/auth.scss'
 
 import { useAuth } from '../hooks/useAuth'
 import { database } from '../services/firebase'
+import { useContext } from 'react'
+import {ThemeContextMode} from '../contexts/ThemeContext'
 
 export function NewRoom (){
+    const {theme} = useContext(ThemeContextMode)
     const history = useHistory();
     const [newRoom, setNewRoom] = useState('');
     async function HandleCreateRoom(event: FormEvent){
@@ -26,12 +30,12 @@ export function NewRoom (){
 
         })
 
-        history.push(`/rooms/${firebaseRoom.key}`)
+        history.push(`/rooms/admin/${firebaseRoom.key}`)
     }
 
     const {user} = useAuth();
     return(
-        <div id="page-auth">
+        <div id="page-auth" className={theme}>
             <aside>
                 <img src={Illustrationimg} alt="ilustração simbolizando perguntas e respostas"/>
                 <strong>Crie salas de perguntas ao-vivo</strong>
@@ -40,7 +44,7 @@ export function NewRoom (){
             </aside>
             <main>
                 <div className="main-content">
-                    <img src={Logo} alt="Let me Ask" />
+                    <img src={theme==='dark' ? (LogoDark): (LogoLight)} alt="Let me Ask" />
                     
                     <h2>Criar uma nova sala.</h2>
                     <form onSubmit={HandleCreateRoom}>

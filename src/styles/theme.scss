@@ -1,0 +1,27 @@
+.light {
+    --theme-color:#A80000;
+    --theme-page-background:#FFF;
+    --theme-page-aside-background:#8554fd;
+    --theme-page-text:#29292e;
+    --theme-page-buttons:#835afd;
+    --theme-page-border:#e2e2e2;
+    --theme-question-background:#fefefe;
+    --theme-border-question: none;
+    --theme-background-question-answered:linear-gradient(#a7F3d0,#059669);
+    --theme-span-user-color-name:#737380;
+    --theme-button-question-delete-answred-highlighted-color:#737380;
+}
+
+.dark {
+    --theme-color: #0000A8;
+    --theme-page-background:#111827;
+    --theme-page-aside-background:#5B21B6;
+    --theme-page-buttons:#04d361;
+    --theme-page-text: #FFF;
+    --theme-page-border:#282b29;
+    --theme-question-background:#111827;
+    --theme-border-question: #04d361;
+    --theme-background-question-answered:linear-gradient(#a78bfa,#6d28d9);
+    --theme-span-user-color-name:#e2e2e2;
+    --theme-button-question-delete-answred-highlighted-color:#e2e2e2;
+}
