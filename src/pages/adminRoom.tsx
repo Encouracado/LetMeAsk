@@ -1,4 +1,5 @@
-import Logo from '../assets/logo.svg'
+import LogoLight from '../assets/logo.svg'
+import LogoDark from '../assets/logoDark.svg'
 import {useHistory, useParams} from  'react-router-dom'
 import {Button }from '../components/Button'
 import {RoomCode} from '../components/RoomCode'
@@ -12,6 +13,8 @@ import asnwerImg from '../assets/answer.svg'
 import {Question} from '../components/Question'
 import { useRoom } from '../hooks/useRoom'
 import { database } from '../services/firebase'
+import { useContext } from 'react'
+import {ThemeContextMode} from '../contexts/ThemeContext'
  
 type roomParams = {
     id: string,
@@ -21,6 +24,7 @@ type roomParams = {
 
 
 export function AdminRoom(){
+    const {theme} = useContext(ThemeContextMode)
     const history = useHistory()
     //const {user} = useAuth()
     //const [question, setNewQuestion] = useState('');
@@ -57,7 +61,7 @@ export function AdminRoom(){
         <div id="page-room">
             <header>
                 <div className="content">
-                    <img src={Logo} alt="LetmeAsk" />
+                    <img src={theme==='dark' ? (LogoDark): (LogoLight)} alt="LetmeAsk" />
                     <div>
                       <RoomCode code={params.id} />
                       <Button isOutlined onClick={handleEndRoom}>Encerrar a sala</Button>

@@ -5,12 +5,11 @@
 
 }
 
-body{
-  background: #f8f8f8;
-  color: #29292e;
+body, input, button, textarea {
+    font: 400 16px 'Roboto', sans-serif;   
 }
 
-body, input, button, textarea {
-    font: 400 16px 'Roboto', sans-serif;
-    
+body, html{
+  background: var(--theme-page-background);
+  color: var(--theme-page-text);
 }
