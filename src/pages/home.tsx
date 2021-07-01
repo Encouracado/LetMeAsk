@@ -54,14 +54,14 @@ export function Home (){
                 <p>tire as dúvidas da sua audiência em tempo real</p>
                 
             </aside>
-            
-            <main>
-                <div className="buttonToggleTheme">
+            <div className="buttonToggleTheme">
                     <button type="button" onClick={toggleThemeMode}>
                         <IoInvertModeSharp />
                     </button>
                     
                 </div>
+            <main>
+                
                 <div className="main-content">
                    
                     <img src={theme==='dark' ? (LogoDark): (LogoLight)} alt="Let me Ask" />
