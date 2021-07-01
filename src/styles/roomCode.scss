@@ -8,6 +8,10 @@
     cursor: pointer;
     width:25rem;
     position:relative;
+
+    @media(max-width:700px){
+       width:4rem;
+     }
     div {
         background: #835afd;
         padding: 0 12px 4px;
@@ -17,6 +21,10 @@
         height: 100%; // <- Aqui
         position:absolute;
         margin-right: 360px;
+        @media(max-width:700px){
+            margin-right: 5px;
+            padding: 0 22px 4px;
+        }
       }
     span{
         
@@ -28,5 +36,8 @@
         font-size: 14px;
         font-weight: 500;
         color: var(--theme-page-text);
+        @media(max-width:700px){
+            display:none;
+         }
     }
 }
