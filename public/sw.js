@@ -11,7 +11,7 @@ var urlsToCache = [
     '/icon?family=Material+Icons'
 ];
 
-self.addEventListener('install', function (event) {
+Window.self.addEventListener('install', function (event) {
     // Perform install steps
     event.waitUntil(
         caches.open(CACHE_NAME)
@@ -21,7 +21,7 @@ self.addEventListener('install', function (event) {
     );
 });
 
-self.addEventListener('fetch', function (event) {
+Window.self.addEventListener('fetch', function (event) {
     event.respondWith(
         caches.match(event.request)
             .then(function (response) {
