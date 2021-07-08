@@ -28,9 +28,6 @@
 <img src="https://live.staticflickr.com/65535/51282693707_c9ea037723_b.jpg"/>
 <img src="https://live.staticflickr.com/65535/51284166219_bd74e7b7cb_b.jpg"/>
   
-
-
-
 <h3 align="center">Technologies</h3>
 
 - React
