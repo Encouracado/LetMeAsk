@@ -4,7 +4,7 @@
 
 <p>Projeto idealizado pela equipe da Rocketseat com o objetivo de passar ensinamento em uma semana de programação extrema, o site tem por objetivo criar salas de perguntas onde usuarios podem fazer perguntas para o dono da sala, as perguntas são salvas no firebase e dentro da aplicação podem ser marcadas como respondidas pelo autor além de outras funcionalidades como curtidas</p>
 
-<strong>Com o objetivo de ampliar meus aprendizados estou adcionando features adcionais de autoria própria ao projeto </strong>
+<strong>Com o objetivo de ampliar meus aprendizados estou adcionando features adcionais de autoria própria ao projeto. </strong>
 
 
 <div align="center">
