@@ -17,9 +17,9 @@
 
 - [x] Dark Mode(com botão de alternancia para light mode)
 - [x] Progressive Web App 
-- [ ] Update styles to styled-components
+- [x] Update styles to styled-components
 - [x] Responsiveness for mobile devices
-- [ ] Improving user experience
+- [x] Improving user experience
 
 
 <h2 align="center">Mobile Mode</h2>
