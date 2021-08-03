@@ -1,5 +1,8 @@
-#page-auth{
-    display: flex;
+import styled from "styled-components";
+
+export const PageAuth = styled.div`
+
+display: flex;
     align-items: stretch;
     height: 100vh;
 
@@ -15,7 +18,12 @@
         }
     }
 
-    aside{
+
+
+`;
+
+export const Aside = styled.aside`
+
         flex: 7;
         background: var(--theme-page-aside-background);
         color: #fff;
@@ -44,8 +52,11 @@
         @media(max-width:700px){
            display:none;
         }
-    }
-    main{
+
+`;
+
+export const Main = styled.main`
+
         flex: 8;
         background: var(--theme-page-background);
         padding: 0 32px;
@@ -59,32 +70,37 @@
             margin-left:3rem;    
          }
 
-    }
 
-    .buttonToggleTheme{
+`;
+
+export const ButtonToggleTheme =  styled.button`
+
+
+
+svg{
+    width:40px;
+    height: 40px;
+    color:#4B5563;
+    
+}
+
+background: none;
+border:0;
+margin-bottom: 35rem;
+right:0;
+
+
+`;
+
+export const DivForButtonToggleTheme = styled.div`
+
         margin:0;
         display:flex;
         flex-direction: row-reverse;
 
-        button{
+`;
 
-            svg{
-                width:40px;
-                height: 40px;
-                color:#4B5563;
-                
-            }
-            
-            background: none;
-            border:0;
-            margin-bottom: 35rem;
-            right:0;
-        }
-
- 
-    }
-
-    .main-content{
+export const MainContent = styled.div`
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -116,6 +132,7 @@
             button, input{
                 width: 100%;
             }
+            
         }
         p{
             font-size: 14px;
@@ -128,9 +145,11 @@
             }
         }
 
-    }
-    .create-room{
-        margin-top: 64px;
+`;
+
+export const GoogleButton = styled.button`
+
+margin-top: 64px;
         height: 50px;
         border-radius: 8px;
         font-weight: 500;
@@ -153,31 +172,29 @@
         &:hover{
             filter:brightness(0.9)
         }
-    }
-    .separator{
-        font-size:14px;
-        color:#a8a8b3;
 
-        margin: 32px 0;
-        display: flex;
-        align-items: center;
+`;
 
-        &::before{
-          content: '';
-          flex: 1;
-          height: 1px;
-          background: #a8a8b3;
-          margin-right: 16px;
-        }
-        &::after{
-          content: '';
-          flex: 1;
-          height: 1px;
-          background: #a8a8b3;
-          margin-left: 16px;
-        }
-       
-    }
+export const DivForFormEnterRoom = styled.div`
+font-size:14px;
+color:#a8a8b3;
 
+margin: 32px 0;
+display: flex;
+align-items: center;
 
+&::before{
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #a8a8b3;
+  margin-right: 16px;
 }
+&::after{
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #a8a8b3;
+  margin-left: 16px;
+}
+`;

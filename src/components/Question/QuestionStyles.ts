@@ -1,4 +1,7 @@
-.question{
+import styled from "styled-components";
+
+export const QuestionContainer = styled.div`
+
     background: var(--theme-question-background);
     border-radius: 8px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
@@ -28,26 +31,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        .user-info{
-            display: flex;
-            align-items:center;
-
-            img{
-                width: 32px;
-                height: 32px;
-                border-radius: 50%;
-            }
-            span{
-                margin-left: 8px;
-                
-                color: var(--theme-span-user-color-name);
-                font-size: 14px;
-                @media(max-width:700px){
-                    margin: 10px;
-                    font-size: 10px;
-                }
-            }
-        }
 
         >div{
             display: flex;
@@ -83,4 +66,29 @@
         }
     }
 
-}
+`;
+
+export const UserInfo = styled.div`
+
+
+            display: flex;
+            align-items:center;
+
+            img{
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+            }
+            span{
+                margin-left: 8px;
+                
+                color: var(--theme-span-user-color-name);
+                font-size: 14px;
+                @media(max-width:700px){
+                    margin: 10px;
+                    font-size: 10px;
+                }
+            }
+        
+
+`;

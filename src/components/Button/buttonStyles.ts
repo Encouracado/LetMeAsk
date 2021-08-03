@@ -1,5 +1,7 @@
-button {
-        
+import styled from "styled-components";
+
+export const StyledButton = styled.button`
+
         height: 50px;
         border-radius: 8px;
         font-weight: 500;
@@ -17,9 +19,9 @@ button {
         transition: filter 0.2s;
 
         &.outlined{
-            background: #fff;
+            background: #835afd;
             border: 1px solid #835afd;
-            color: #835afd;
+            color: #fff;
         }
 
         img{
@@ -35,4 +37,6 @@ button {
             cursor: not-allowed;
         }
 
-}
+
+
+`;

@@ -1,4 +1,7 @@
-.room-code{
+import styled from "styled-components";
+
+export const RoomCodeButton = styled.button`
+
     height: 40px;
     border-radius: 8px;
     overflow: hidden;
@@ -14,13 +17,12 @@
      }
     div {
         background: #835afd;
-        padding: 0 12px 4px;
+        padding: 8px 14px 8px 8px;
         display: flex;
         justify-content: center;
-        align-items: center;
-        height: 100%; // <- Aqui
+        align-items: center; 
         position:absolute;
-        margin-right: 360px;
+        margin-bottom: 40px;
         @media(max-width:700px){
             margin-right: 5px;
             padding: 0 22px 4px;
@@ -36,8 +38,11 @@
         font-size: 14px;
         font-weight: 500;
         color: var(--theme-page-text);
+        margin-left: 40px;
         @media(max-width:700px){
             display:none;
          }
     }
-}
+
+
+`;
